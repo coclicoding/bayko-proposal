@@ -1,0 +1,178 @@
+:root {
+    --bg-color: #f7ebe1;
+    --card-bg: #fdf5f0;
+    --pink-primary: #fcaec5;
+    --pink-hover: #fa93b2;
+    --text-color: #4a3b32;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    display: none;
+    box-sizing: border-box;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.container.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--pink-primary);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    position: relative;
+    height: 50px;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.yes-btn, .action-btn {
+    background-color: var(--pink-primary);
+    color: white;
+}
+
+.yes-btn:hover, .action-btn:hover {
+    background-color: var(--pink-hover);
+    transform: scale(1.05);
+}
+
+.no-btn {
+    background-color: #e8dbd1;
+    color: #8c7669;
+    position: absolute;
+    transition: all 0.1s ease;
+    z-index: 10;
+}
+
+/* Form Styles */
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="date"], select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ecdcd0;
+    border-radius: 12px;
+    background-color: white;
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Food Grid */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.food-card {
+    background-color: white;
+    padding: 12px 5px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.food-card p {
+    font-size: 0.8rem;
+    margin: 5px 0 0 0;
+    font-weight: 500;
+}
+
+.food-card.selected {
+    border-color: var(--pink-primary);
+    background-color: #fff0f3;
+    transform: scale(1.05);
+}
+
+.ps-text {
+    font-size: 0.85rem;
+    color: #8a7568;
+    line-height: 1.5;
+    margin-top: 25px;
+}
+
+.header-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hearts {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
