@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Proposal 🌸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Page 1: Proposal Screen -->
+    <div id="page1" class="container active">
+        <div class="flower-bg">🌸 🌸 🌸</div>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3BwZzN0YXN0ZzBneW94ZXN0d3V5M295NThwYm1idXpjeGZidmszMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MDJ9IbhswvNa0/giphy.gif" alt="Cute Cat" class="main-img">
+        <h1>🌸 Will you go on a date with me? 🌸</h1>
+        <div class="btn-group">
+            <button id="yesBtn" class="btn yes-btn">YES 💕</button>
+            <button id="noBtn" class="btn no-btn">no.. 😿</button>
+        </div>
+    </div>
+
+    <!-- Page 2: Surprise Screen -->
+    <div id="page2" class="container">
+        <img src="https://media.giphy.com/media/l1Kst3WE3v7jv97wY/giphy.gif" alt="Spongebob" class="main-img">
+        <h1>WAIT YOU ACTUALLY SAID YES?? 😭</h1>
+        <p>I was so ready for you to say no</p>
+        <button onclick="nextPage(3)" class="btn action-btn">okay okay! ✨</button>
+    </div>
+
+    <!-- Page 3: Date & Time Screen -->
+    <div id="page3" class="container">
+        <div class="header-icon">📅 🐾</div>
+        <h1>So... when are you free?</h1>
+        
+        <div class="form-group">
+            <label>Pick a Day</label>
+            <input type="date" id="dateInput">
+        </div>
+        
+        <div class="form-group">
+            <label>What Time?</label>
+            <select id="timeInput">
+                <option value="">Select a time...</option>
+                <option value="6:00 PM">6:00 PM — Perfect sunset timing!</option>
+                <option value="7:00 PM">7:00 PM — You're making me hungry already</option>
+                <option value="8:00 PM">8:00 PM — Late night vibes</option>
+            </select>
+        </div>
+        
+        <button onclick="nextPage(4)" class="btn action-btn">set the date! 💗</button>
+    </div>
+
+    <!-- Page 4: Food Screen -->
+    <div id="page4" class="container">
+        <h1>What are we feeling? 🍕✨</h1>
+        <div class="food-grid">
+            <div class="food-card" onclick="selectFood(this)">🍕<p>Pizza</p></div>
+            <div class="food-card" onclick="selectFood(this)">🍣<p>Sushi</p></div>
+            <div class="food-card" onclick="this.classList.toggle('selected')">🍔<p>Burgers</p></div>
+            <div class="food-card" onclick="selectFood(this)">🍝<p>Pasta</p></div>
+            <div class="food-card" onclick="selectFood(this)">🌮<p>Tacos</p></div>
+            <div class="food-card" onclick="selectFood(this)">🍜<p>Ramen</p></div>
+        </div>
+        <button onclick="nextPage(5)" class="btn action-btn">this one! ➔</button>
+    </div>
+
+    <!-- Page 5: Final Love Letter -->
+    <div id="page5" class="container">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmszbWw3dGR6M2g1dDhkM2pxNzV6Z3pxM3V0YTZwZHAzcnVtcGphNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TIGPnhTUw6u8wLy1wP/giphy.gif" alt="Shrek" class="profile-img">
+        <h2>glad you didn't say no. be ready by 6, I'm coming to get you 🚗</h2>
+        <p class="ps-text">P.S. normal people text. I made a website on Replit, during lunch, for you. no big deal. 💕</p>
+        <div class="hearts">💖 💖</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
